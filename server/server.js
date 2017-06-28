@@ -6,3 +6,4 @@ const mainCtrl = require('./controllers/mainCtrl');
 const app = express();
 
 app.use(bodyParser.json());
+app.use(middleware.addHeaders);
