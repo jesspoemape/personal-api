@@ -1,77 +1,59 @@
 var user = {
-    name: 'Jess',
-  location: 'Utah, USA',
-  occupations: ['wife', 'student', 'sister', 'daughter'],
+    name: "Jess",
+  location: "Utah, USA",
+  occupations: ["wife", "sister", "daughter", "student"],
   hobbies: [
     {
-      name: 'cooking',
-      type: 'home'
+      name: "cooking",
+      type: "home"
     },
     {
-      name: 'sewing',
-      type: 'home'
+      name: "sewing",
+      type: "home"
     },
     {
-      name: 'reading',
-      type: 'liesure'
+      name: "reading",
+      type: "liesure"
     }
   ],
   family: [
     {
-      name: 'JJ',
-      relation: 'spouse',
-      gender: 'male'
+      name: "JJ",
+      relation: "spouse",
+      gender: "male"
     },
     {
-      name: 'Romina',
-      relation: 'sister',
-      gender: 'female'
+      name: "Romina",
+      relation: "sister",
+      gender: "female"
     },{
-      name: 'Barista',
-      relation: 'sister',
-      gender: 'female'
+      name: "Barista",
+      relation: "sister",
+      gender: "female"
     },{
-      name: 'Stefan',
-      relation: 'sister',
-      gender: 'female'
+      name: "Stefan",
+      relation: "sister",
+      gender: "female"
+    },{
+      name: "Isaac",
+      relation: "cat",
+      gender: "male"
     }
-  ],
-  pets: [
-      {
-          name: 'Isaac',
-          breed: 'Long Hair Cat',
-          age: 2.5,
-      },
-      {
-          name: 'Squinch',
-          breed: 'Chihuahua/ Terrier',
-          age: 4
-      },
-      {
-          name: 'Kishka',
-          breed: 'German Shepherd/ Timber Wolf',
-          age: 3
-      },
-      {
-          name: 'Prince',
-          breed: 'Chihuahua',
-          age: 2
-      }
   ],
   restaurants: [
     {
-      name: 'Tacos Don Joaquin',
-      type: 'Mexican',
+      name: "Tacos Don Joaquin",
+      type: "Mexican",
       rating: 5
     },
     {
-      name: 'Sushi Ya',
-      type: 'Japanese',
+      name: "Sushi Ya",
+      type: "Japanese",
       rating: 5
     },
     {
-      name: 'Texas Roadhouse',
-      type: 'American',
+      name: "Texas Roadhouse",
+      type: "American",
       rating: 4
     }
   ]};
