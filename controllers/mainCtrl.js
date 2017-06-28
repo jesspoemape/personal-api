@@ -15,5 +15,9 @@ module.exports = {
     },
     getHobbies: function (req, res) {
         res.json({hobbies: user.hobbies});
+    },
+    getHobbiesByType: function (req, res) {
+        var result = user.hobbies.filter( val => val.type === req.params.type );
+        res.json(result);
     }
 }
