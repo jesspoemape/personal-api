@@ -23,7 +23,7 @@ module.exports = {
             next();
         }
         else {
-            res.status(404);
+            res.status(404).json("invalid username or pin");
         }
     }
 }

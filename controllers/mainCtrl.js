@@ -24,7 +24,14 @@ module.exports = {
         res.json({latestOccupation: user.occupations[user.occupations.length -1]});
     },
     getHobbies: function (req, res) {
-        res.json({hobbies: user.hobbies});
+        if (req.query.name) {
+            result = user.hobbies.filter( val => val.name === req.query.name ); 
+                res.json(result);
+        }
+        else {
+            res.json({hobbies: user.hobbies});
+        }
+        
     },
     getHobbiesByType: function (req, res) {
         var result = user.hobbies.filter( val => val.type === req.params.type );
