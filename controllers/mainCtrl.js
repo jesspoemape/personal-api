@@ -19,5 +19,14 @@ module.exports = {
     getHobbiesByType: function (req, res) {
         var result = user.hobbies.filter( val => val.type === req.params.type );
         res.json(result);
+    },
+    getFamily: function (req, res) {
+        if (req.query.relation) {
+            result = user.family.filter( val => val.relation === req.query.relation );
+            res.json(result);
+        }
+        else {
+            res.json({family: user.family});
+        }
     }
 }
