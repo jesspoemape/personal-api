@@ -50,4 +50,22 @@ module.exports = {
         res.json(result);
     },
 
+    updateName: function (req, res) {
+        user.name = req.params.name;
+        res.json({name: user.name});
+    },
+    updateLocation: function (req, res) {
+        user.location = req.params.loc;
+        res.json({location: user.location});
+    },
+
+    addHobby: function (req, res) {
+        user.hobbies.push({name: req.params.hobby, type: req.params.type});
+        res.json(user.hobbies);
+    },
+    addOcc: function (req, res) {
+        user.occupations.push(req.params.occ);
+        res.json(user.occupations);
+    }
+
 }

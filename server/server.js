@@ -20,6 +20,11 @@ app.get('/family', mainCtrl.getFamily);
 app.get('/restaurants', mainCtrl.getRestaurants);
 app.get('/restaurants/:name', mainCtrl.getRestaurantsByName);
 
+app.put('/name/:name', mainCtrl.updateName);
+app.put('/location/:loc', mainCtrl.updateLocation);
+
+app.post('/hobbies/:hobby/:type', mainCtrl.addHobby);
+app.post('/occupations/:occ', mainCtrl.addOcc);
 
 // =====================================
 
