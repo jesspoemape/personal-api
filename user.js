@@ -55,6 +55,10 @@ var user = {
       name: "Texas Roadhouse",
       type: "American",
       rating: 4
+    },{
+      name: "McDonalds",
+      type: "American",
+      rating: 1
     }
   ]};
 module.exports = user;
