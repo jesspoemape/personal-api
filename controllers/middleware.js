@@ -1,4 +1,5 @@
 const skillz = require('./../skillz');
+const secrets = require('./../secrets');
 
 module.exports = {
     addHeaders: function(req, res, next) {
@@ -16,5 +17,13 @@ module.exports = {
     generateId: function (req, res, next) {
         res.set(req.body.id = skillz.work.length +1);
         next();
+    },
+    verifyUser: function (req, res, next) {
+        if (req.params.username === "JaeLaRue" && req.params.pin === "0000") {
+            next();
+        }
+        else {
+            res.status(404);
+        }
     }
 }

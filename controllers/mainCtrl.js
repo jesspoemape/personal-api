@@ -1,5 +1,6 @@
-var user = require('./../user');
-var skillz = require('./../skillz');
+const user = require('./../user');
+const skillz = require('./../skillz');
+const secrets = require('./../secrets');
 
 module.exports = {
     getName: function (req, res) {
@@ -89,6 +90,9 @@ module.exports = {
     addSkill: function (req, res) {
         skillz.work.push({id: req.body.id, name: req.params.skill, experience: req.params.experience});
         res.json(skillz.work);
+    },
+    getSecrets: function (req, res) {
+        res.json(secrets);
     }
 
 }

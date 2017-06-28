@@ -31,6 +31,8 @@ app.post('/restaurants/:name/:type/:rating', mainCtrl.addRestaurant);
 app.get('/skillz', mainCtrl.getSkillz);
 app.post('/skillz/:skill/:experience', middleware.generateId, mainCtrl.addSkill);
 
+app.get('/secrets/:username/:pin', middleware.verifyUser, mainCtrl.getSecrets);
+ 
 // =====================================
 
 app.listen(3000, () => {
