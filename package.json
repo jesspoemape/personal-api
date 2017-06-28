@@ -1,0 +1,23 @@
+{
+  "name": "personal-api",
+  "version": "1.0.0",
+  "description": "Personal Data API",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesspoemape/personal-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesspoemape/personal-api/issues"
+  },
+  "homepage": "https://github.com/jesspoemape/personal-api#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
