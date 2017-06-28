@@ -1,3 +1,5 @@
+const skillz = require('./../skillz');
+
 module.exports = {
     addHeaders: function(req, res, next) {
         res.status(200).set({
@@ -9,6 +11,10 @@ module.exports = {
             'X-Frame-Options': 'SAMEORIGIN',
             'Content-Security-Policy': "default-src 'self' devmountain.github.io"
         });
+        next();
+    },
+    generateId: function (req, res, next) {
+        res.set(req.body.id = skillz.work.length +1);
         next();
     }
 }

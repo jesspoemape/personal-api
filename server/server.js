@@ -28,6 +28,9 @@ app.post('/occupations/:occ', mainCtrl.addOcc);
 app.post('/family/:name/:gender/:relation', mainCtrl.addFamily);
 app.post('/restaurants/:name/:type/:rating', mainCtrl.addRestaurant);
 
+app.get('/skillz', mainCtrl.getSkillz);
+app.post('/skillz/:skill/:experience', middleware.generateId, mainCtrl.addSkill);
+
 // =====================================
 
 app.listen(3000, () => {

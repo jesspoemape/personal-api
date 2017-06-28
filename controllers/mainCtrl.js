@@ -1,4 +1,5 @@
 var user = require('./../user');
+var skillz = require('./../skillz');
 
 module.exports = {
     getName: function (req, res) {
@@ -74,6 +75,20 @@ module.exports = {
     addRestaurant: function (req, res) {
         user.restaurants.push({name: req.params.name, type: req.params.type, rating: req.params.rating});
         res.json(user.restaurants);
+    },
+
+    getSkillz: function (req, res) {
+        if (req.query.experience) {
+            result = skillz.work.filter( val => val.experience === req.query.experience);
+            res.json(result);
+        }
+        else {
+            res.json({skills: skillz.work});
+        }
+    },
+    addSkill: function (req, res) {
+        skillz.work.push({id: req.body.id, name: req.params.skill, experience: req.params.experience});
+        res.json(skillz.work);
     }
 
 }
