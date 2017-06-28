@@ -66,6 +66,14 @@ module.exports = {
     addOcc: function (req, res) {
         user.occupations.push(req.params.occ);
         res.json(user.occupations);
+    },
+    addFamily: function (req, res) {
+        user.family.push({name: req.params.name, relation: req.params.relation, gender: req.params.gender});
+        res.json(user.family);
+    },
+    addRestaurant: function (req, res) {
+        user.restaurants.push({name: req.params.name, type: req.params.type, rating: req.params.rating});
+        res.json(user.restaurants);
     }
 
 }

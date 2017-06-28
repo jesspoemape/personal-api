@@ -25,6 +25,8 @@ app.put('/location/:loc', mainCtrl.updateLocation);
 
 app.post('/hobbies/:hobby/:type', mainCtrl.addHobby);
 app.post('/occupations/:occ', mainCtrl.addOcc);
+app.post('/family/:name/:gender/:relation', mainCtrl.addFamily);
+app.post('/restaurants/:name/:type/:rating', mainCtrl.addRestaurant);
 
 // =====================================
 
